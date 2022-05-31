@@ -23,8 +23,7 @@
         },
         "variables": {
             "STEAMID": "1829350",
-            "LD_LIBRARY_PATH": "/home/steam/steamcmd/data:/home/steam/steamcmd/data/bins",
-            "STEAM_APP_ID": "FAF2A4440AD8A08D4AA17F852C0ED263"
+            "LD_LIBRARY_PATH": "/home/steam/steamcmd/data:/home/steam/steamcmd/data/bins"
         },
         "volumes": {
             "shared_plan_path": {
