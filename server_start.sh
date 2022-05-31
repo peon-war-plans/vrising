@@ -11,4 +11,7 @@ exec 1>>$logfile 2>&1
 echo "##################### STARTING SERVER ######################"
 # CUSTOM GAME SERVER COMMAND
 #./data/srcds_run -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2 +sv_setsteamaccount $STEAM_APP_ID
-while true
+while true; do
+    echo "tick"
+    sleep 5
+done
