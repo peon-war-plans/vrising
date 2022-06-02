@@ -8,7 +8,7 @@
         "description": "https://raw.githubusercontent.com/peon-war-plans/vrising/main/README.md"
     },
     "container_config": {
-        "image": "cm2network/steamcmd",
+        "image": "umlatt/steamcmd-winehq:0.0.1-dev",
         "user": "steam",
         "ports": {
             "27015/tcp": 27015,
