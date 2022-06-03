@@ -11,6 +11,9 @@
         "image": "umlatt/steamcmd-winehq:0.0.1-dev",
         "user": "steam",
         "ports": {
+            "9876/udp": 9876,
+            "9877/udp": 9877,
+            "25575/tcp": 25575,
             "27015/tcp": 27015,
             "27036/tcp": 27036,
             "27015/udp": 27015,
