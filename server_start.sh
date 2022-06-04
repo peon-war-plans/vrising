@@ -27,10 +27,9 @@ printf '"Server Name" : "'$SERVERNAME'",'   >> $conf_file
 printf '"World" : "'$WORLDNAME'",'          >> $conf_file
 printf '"Password" : "'$PASSWORD'" }'       >> $conf_file
 # CUSTOM GAME SERVER COMMAND
-echo "Clean existing /tmp/.X0-lock"
+echo "Clean any existing /tmp/.X0-lock"
 rm -rf /tmp/.X0-lock 2>&1
-echo " "
-echo "Starting Xvfb"
+echo "Start Xvfb"
 Xvfb :0 -screen 0 1024x768x16 &
-echo "Start server"
+echo "Start game server (Using 'DISPLAY=:0.0 ' as a prefix to wine)"
 DISPLAY=:0.0 wine64 data/VRisingServer.exe -persistentDataPath $configpath -serverName "$SERVERNAME" -saveName "$WORLDNAME" -logFile "/var/log/peon/server.log" "$GAMEPORT" "$QUERYPORT" 2>&1
