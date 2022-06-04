@@ -10,8 +10,10 @@ exec 1>>$logfile 2>&1
 # Logging config end
 echo "##################### STARTING SERVER ######################"
 # CUSTOM GAME SERVER COMMAND
-#./data/srcds_run -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2 +sv_setsteamaccount $STEAM_APP_ID
-while true; do
-    echo "tick"
-    sleep 5
-done
+echo "Clean existing /tmp/.X0-lock"
+rm -rf /tmp/.X0-lock 2>&1
+echo " "
+echo "Starting Xvfb"
+Xvfb :0 -screen 0 1024x768x16 &
+echo "Start server"
+DISPLAY=:0.0 wine64 /mnt/vrising/server/VRisingServer.exe -persistentDataPath /home/steam/steamcmd/peon/config -serverName "$SERVERNAME" -saveName "$WORLDNAME" -logFile "/var/log/peon/server.log" "$GAMEPORT" "$QUERYPORT" 2>&1

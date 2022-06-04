@@ -27,7 +27,9 @@
         },
         "variables": {
             "STEAMID": "1829350",
-            "LD_LIBRARY_PATH": "/home/steam/steamcmd/data:/home/steam/steamcmd/data/bins"
+            "LD_LIBRARY_PATH": "/home/steam/steamcmd/data:/home/steam/steamcmd/data/bins",
+            "GAMEPORT": "9876",
+            "QUERYPORT": "9877"
         },
         "volumes": {
             "shared_plan_path": {
@@ -39,7 +41,7 @@
                 "mode": "rw"
             },
             "config": {
-                "bind": "/home/steam/config",
+                "bind": "/home/steam/steamcmd/peon/config",
                 "mode": "rw"
             },
             "data_path": {
