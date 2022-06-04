@@ -20,7 +20,12 @@ if [ ! -f "$configpath/ServerHostSettings.json" ]; then
         echo "$configpath/ServerHostSettings.json not found. Copying default file."
         cp "$rootpath/data/VRisingServer_Data/StreamingAssets/Settings/ServerHostSettings.json" "$configpath" 2>&1
 fi
-
+conf_file="/home/steam/steamcmd/peon/config/server.config"
+printf '{ "Server IP" : "'$PUBLIC_IP'",'    > $conf_file
+printf '"PORT" : "'$GAMEPORT'",'            >> $conf_file
+printf '"Server Name" : "'$SERVERNAME'",'   >> $conf_file
+printf '"World" : "'$WORLDNAME'",'          >> $conf_file
+printf '"Password" : "'$PASSWORD'" }'       >> $conf_file
 # CUSTOM GAME SERVER COMMAND
 echo "Clean existing /tmp/.X0-lock"
 rm -rf /tmp/.X0-lock 2>&1
