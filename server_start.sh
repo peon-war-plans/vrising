@@ -16,4 +16,5 @@ echo " "
 echo "Starting Xvfb"
 Xvfb :0 -screen 0 1024x768x16 &
 echo "Start server"
-DISPLAY=:0.0 wine64 data/VRisingServer.exe -persistentDataPath /home/steam/steamcmd/peon/config -serverName "$SERVERNAME" -saveName "$WORLDNAME" -logFile "/var/log/peon/server.log" "$GAMEPORT" "$QUERYPORT" 2>&1
+#DISPLAY=:0.0 wine64 data/VRisingServer.exe -persistentDataPath /home/steam/steamcmd/peon/config -serverName "$SERVERNAME" -saveName "$WORLDNAME" -logFile "/var/log/peon/server.log" "$GAMEPORT" "$QUERYPORT" 2>&1
+bash
