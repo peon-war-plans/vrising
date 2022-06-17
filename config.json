@@ -8,7 +8,8 @@
         "description": "https://raw.githubusercontent.com/peon-war-plans/vrising/main/README.md"
     },
     "container_config": {
-        "image": "umlatt/steamcmd-winehq:0.0.2-dev",
+        "image": "umlatt/steamcmd-winehq",
+
         "user": "steam",
         "ports": {
             "9876/udp": 9876,
